@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Paradise Donut Company";
+}
+
+@*@model IndexViewModel*@
+
+<div class="top-container navbar-dark">
+    <div class="overlay-img">
+    </div>
+    <div class="overlay-title">
+        <h1 class="title-center display-3 slow-fade">Welcome to<br><span class="display-1">Paradise Donut Company</span></h1>
+    </div>
+</div>
+
+<!-- Services-->
+<section class="page-section" id="services">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Donuts</h2>
+            <hr width="100" />
+            <h3 class="section-subheading text-muted">Take a look at our donut selection.</h3>
+        </div>
+        <div class="row text-center">
+
+            @*@foreach (var r in Model.Recipes)
+                {
+                    <p>@r.RecipeTitle</p>
+                }*@
+            <div class="col-md-4">
+                <h4 class="my-3">donut 1</h4>
+                <p>insert img here</p>
+                <p class="text-muted">$</p>
+            </div>
+            <div class="col-md-4">
+                <h4 class="my-3">donut 2</h4>
+                <p>insert img here</p>
+                <p class="text-muted">$</p>
+            </div>
+            <div class="col-md-4">
+                <h4 class="my-3">donut 3</h4>
+                <p>insert img here</p>
+                <p class="text-muted">$</p>
+            </div>
+        </div>
+    </div>
+</section>
