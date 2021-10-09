@@ -2,7 +2,7 @@
     ViewBag.Title = "Paradise Donut Company";
 }
 
-@*@model IndexViewModel*@
+@model IEnumerable<Donuts>
 
 <div class="top-container navbar-dark">
     <div class="overlay-img">
@@ -21,26 +21,15 @@
             <h3 class="section-subheading text-muted">Take a look at our donut selection.</h3>
         </div>
         <div class="row text-center">
-
-            @*@foreach (var r in Model.Recipes)
+        @foreach (var d in Model)
                 {
-                    <p>@r.RecipeTitle</p>
-                }*@
             <div class="col-md-4">
-                <h4 class="my-3">donut 1</h4>
-                <p>insert img here</p>
-                <p class="text-muted">$</p>
+                <h4 class="my-3">@d.Donut_name</h4>
+                <p>@d.image_url</p>
+                <p class="text-muted">$@d.Price</p>
             </div>
-            <div class="col-md-4">
-                <h4 class="my-3">donut 2</h4>
-                <p>insert img here</p>
-                <p class="text-muted">$</p>
-            </div>
-            <div class="col-md-4">
-                <h4 class="my-3">donut 3</h4>
-                <p>insert img here</p>
-                <p class="text-muted">$</p>
-            </div>
+                }
+            
         </div>
     </div>
 </section>

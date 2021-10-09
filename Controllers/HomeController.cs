@@ -12,24 +12,17 @@ namespace IS531_DonutsProject.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private DonutContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, DonutContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            //return View(new IndexViewModel
-            //{
-            //    Recipes = (_context.Recipes
-            //        .Where(m => m.RecipeClassId == mealtypeid || mealtypeid == null)
-            //        .OrderBy(m => m.RecipeTitle)
-            //        .Skip((pageNum - 1) * pageSize)
-            //        .Take(pageSize)
-            //        .ToList()),
-            //});
-            return View();
+            return View(_context.Donuts);
         }
 
         public IActionResult Privacy()
